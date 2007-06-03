@@ -2,7 +2,7 @@
 %define module	Module-Reload
 %define name	perl-%{module}
 %define version	1.07
-%define rel	1
+%define rel	2
 
 Summary:	Reload %%INC files when updated on disk
 Name:		%{name}
