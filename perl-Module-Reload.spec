@@ -1,20 +1,18 @@
+%define upstream_name	 Module-Reload
+%define upstream_version 1.07
 
-%define module	Module-Reload
-%define name	perl-%{module}
-%define version	1.07
-%define rel	2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Reload %%INC files when updated on disk
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 When Perl pulls a file via C<require>, it stores the filename in the
@@ -24,7 +22,7 @@ module's handler iterates over C<%%INC> and reloads the file if it has
 changed on disk. 
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -42,4 +40,3 @@ rm -rf %{buildroot}
 %doc README
 %{perl_vendorlib}/Module
 %{_mandir}/man3/*
-
