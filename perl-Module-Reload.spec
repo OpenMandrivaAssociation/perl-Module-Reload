@@ -8,7 +8,7 @@ Release:	3
 Summary:	Reload %%INC files when updated on disk
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 Source1:        %{name}.rpmlintrc
 
