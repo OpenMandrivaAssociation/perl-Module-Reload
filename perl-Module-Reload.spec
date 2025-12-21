@@ -12,6 +12,7 @@ Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 Source1:        %{name}.rpmlintrc
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
