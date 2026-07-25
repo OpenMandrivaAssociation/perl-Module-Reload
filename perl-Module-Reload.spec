@@ -1,15 +1,15 @@
 %define upstream_name	 Module-Reload
-%define upstream_version 1.08
+%define upstream_version 1.12
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Reload %%INC files when updated on disk
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/neilb/Module-Reload
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/Module-Reload-%{upstream_version}.tar.gz
 Source1:        %{name}.rpmlintrc
 
 BuildRequires:	make
