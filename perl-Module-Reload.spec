@@ -1,15 +1,13 @@
 %define upstream_name	 Module-Reload
-%define upstream_version 1.12
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.12
+Release:	2
 
 Summary:	Reload %%INC files when updated on disk
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/neilb/Module-Reload
-Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/Module-Reload-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/Module-Reload-%{version}.tar.gz
 Source1:        %{name}.rpmlintrc
 
 BuildRequires:	make
@@ -24,7 +22,7 @@ module's handler iterates over C<%%INC> and reloads the file if it has
 changed on disk. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
